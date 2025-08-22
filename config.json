@@ -9,12 +9,14 @@
     "rules": [ 
       {"clash_mode": "direct", "server": "local"},
       {"clash_mode": "global", "server": "foreign"},
+      {"query_type": "HTTPS", "action": "reject"},
       {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "local"},
       {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
     ],
     "final": "foreign",
     "strategy": "ipv4_only",
-    "independent_cache": true
+    "independent_cache": true,
+    "reverse_mapping": true
   },
   "outbounds": [
     {"tag": "🚀 默认代理", "type": "selector", "outbounds": ["🇭🇰 香港手动", "🔯 香港自动", "🇯🇵 日本手动", "🔯 日本自动", "🇸🇬 狮城手动", "🔯 狮城自动", "ᴛᴡ 台湾手动", "🔯 台湾自动", "ᴋʀ 韩国手动", "🔯 韩国自动", "🇺🇲 美国手动","🔯 美国自动", "🐸 手动选择", "♻️ 自动选择"]},
@@ -139,5 +141,6 @@
   }
 
 }
+
 
 
