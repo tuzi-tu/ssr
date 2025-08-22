@@ -8,7 +8,7 @@
     ],
     "rules": [ 
       {"clash_mode": "direct", "server": "local"},
-      {"clash_mode": "global", "server": "foreign"},
+      {"clash_mode": "global", "server": "fakeip"},
       {"query_type": "HTTPS", "action": "reject"},
       {"rule_set": ["geosite-cn", "geosite-steamcn", "geosite-apple"], "server": "local"},
       {"query_type": ["A", "AAAA"], "server": "fakeip", "rewrite_ttl": 1}
@@ -141,6 +141,7 @@
   }
 
 }
+
 
 
 
